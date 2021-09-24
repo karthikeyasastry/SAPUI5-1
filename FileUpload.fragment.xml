@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>titleAttachment}" afterClose="_afterFileUploadClose">
+		<content>
+			<UploadCollection multiple="false" fileType='xlsx' sameFilenameAllowed="false" instantUpload="false"
+				typeMissmatch="onTypeMismatch" change="onChange" uploadComplete="onUploadComplete" beforeUploadStarts="onBeforeUploadStarts"
+				fileDeleted="onFileDeleted">
+				<toolbar>
+					<OverflowToolbar>
+						<Button text="{i18n>downloadTemplate}" icon="sap-icon://download" press="onDownloadTemplate" enabled="true" type="Emphasized"/>
+						<ToolbarSpacer/>
+						<UploadCollectionToolbarPlaceholder/>
+					</OverflowToolbar>
+				</toolbar>
+			</UploadCollection>
+		</content>
+		<endButton>
+			<Button text="{i18n>btnClose}" press="onCloseFileUpload"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
